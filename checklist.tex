@@ -1,0 +1,36 @@
+\documentclass[twocolumn]{article} % si se quiere solo una columna, eliminar la opcin o poner onecolumn
+\usepackage{enumitem,amssymb} 
+\usepackage[utf8]{inputenc} % para usar acentos normalmente
+
+\newlist{todolist}{itemize}{2} % nueva definición para un entorno llamado "todolist"
+\setlist[todolist]{label=$\square$} % asignacin de la viñeta como cuadrado para chequear
+
+\begin{document}
+
+Acá vamos a poner un texto sobre la checklist
+
+\begin{itemize} % iniciamos una lista de items común con el entorno itemize, como en cualquier LaTeX
+	\item ITEM 1
+		\begin{todolist}    % Acá empiezan las casillitas, el entorno todolist tiene casillas para tildar
+		  \item Ja
+      \item Nein
+      \item Vielleicht
+    \end{todolist}
+
+\vfill\null         % estas dos líneas son para separar las columnas. comentarlas si se quiere una sola.
+\eject
+
+	\item ITEM 2:
+		\begin{todolist}
+			  \item Lista con cuadradito 2
+        \item Si
+        \item No
+      \end{todolist}
+
+\vfill
+\newpage % página nueva
+
+\item 3
+\end{itemize}
+
+\end{document}
